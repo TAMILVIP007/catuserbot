@@ -105,9 +105,7 @@ async def get_ytthumb(videoid: str):
 
 
 def get_yt_video_id(url: str):
-    # https://regex101.com/r/c06cbV/1
-    match = YOUTUBE_REGEX.search(url)
-    if match:
+    if match := YOUTUBE_REGEX.search(url):
         return match.group(1)
 
 
